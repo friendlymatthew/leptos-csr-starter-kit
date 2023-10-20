@@ -36,7 +36,7 @@ fn Button(
 
     let (underline_css, bg_css) = if let Some(css) = &css {
         (
-            format!("text-[{}] hover:underline decoration-[0.3rem]", css),
+            format!("{} hover:underline decoration-[0.3rem]", css),
             format!("")
         )
     } else {
@@ -64,17 +64,17 @@ fn HomePage() -> impl IntoView {
                          <Button
                              href=s!("https://leptos-rs.github.io/leptos/")
                              title=s!("Leptos")
-                             css=Some(s!("#ff7733"))
+                             css=Some(s!("text-orange-500"))
                          /> {" "}
                          <Button
                              href=s!("https://leptos.dev/")
                              title=s!("client-side rendered")
-                             css=Some(s!("#33bbff"))
+                             css=Some(s!("text-pink-400"))
                          /> {" app with "}
                          <Button
                              href=s!("https://github.com/leptos-rs/leptos/discussions/125")
                              title=s!("tailwind.")
-                             css=Some(s!("#dd33ff"))
+                             css=Some(s!("text-blue-600"))
                          />
                      </p>
                  </div>
