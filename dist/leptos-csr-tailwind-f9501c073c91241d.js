@@ -815,7 +815,7 @@ async function __wbg_init(input) {
     if (wasm !== undefined) return wasm;
 
     if (typeof input === 'undefined') {
-        input = new URL('leptos-csr-tailwind-9fafd2b52a475bce_bg.wasm', import.meta.url);
+        input = new URL('leptos-csr-tailwind-f9501c073c91241d_bg.wasm', import.meta.url);
     }
     const imports = __wbg_get_imports();
 

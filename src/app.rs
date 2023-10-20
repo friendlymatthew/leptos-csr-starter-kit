@@ -42,7 +42,7 @@ fn Button(
     } else {
         (
             format!(""),
-            format!("font-medium px-8 py-2 rounded-full border border-white text-white hover:text-indigo-800 transition ease-in duration-300 hover:bg-white")
+            format!("font-semibold px-8 py-2 rounded-full border border-white text-white hover:text-indigo-800 transition ease-in duration-300 hover:bg-white")
         )
     };
 
@@ -56,10 +56,10 @@ fn Button(
 #[component]
 fn HomePage() -> impl IntoView {
      view! {
-         <main class=format!("{} {} py-20", BACKGROUND_CSS, PURPLE_GRADIENT)>
+         <main class=format!("{} {} font-opensans py-20", BACKGROUND_CSS, PURPLE_GRADIENT)>
              <div class=format!("w-full flex flex-col items-center justify-center space-y-[10rem]")>
                  <div class="w-2/3 text-center">
-                     <p class="text-white italic text-3xl md:text-6xl font-opensans font-extrabold">
+                     <p class="text-white italic text-3xl md:text-6xl font-extrabold">
                          {"A blazingly fast way to start a "}
                          <Button
                              href=s!("https://leptos-rs.github.io/leptos/")
