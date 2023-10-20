@@ -4,7 +4,7 @@ This template provides a quick setup to start building web applications using th
 
 ## Quick Start
 
-For detailed instructions and usage guidelines, refer to the [official manual](https://github.com/friendlymatthew/create-leptos-csr-tw).
+To get started please refer to the [manual](https://github.com/friendlymatthew/create-leptos-csr-tw).
 
 ## Features
 

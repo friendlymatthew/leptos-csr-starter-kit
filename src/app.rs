@@ -20,6 +20,13 @@ pub fn App() -> impl IntoView {
         </Router>
     }
 }
+
+macro_rules! s {
+     ($e:expr) => {
+        $e.to_string()
+    };
+}
+
 #[component]
 fn Button(
     href: String,
@@ -27,7 +34,7 @@ fn Button(
     css: Option<String>
 )-> impl IntoView {
 
-    let (underline_css, bg_css) = if let Some(css) = css {
+    let (underline_css, bg_css) = if let Some(css) = &css {
         (
             format!("text-[{}] hover:underline decoration-[0.3rem]", css),
             format!("")
@@ -48,7 +55,6 @@ fn Button(
 
 #[component]
 fn HomePage() -> impl IntoView {
-
      view! {
          <main class=format!("{} {} py-20", BACKGROUND_CSS, PURPLE_GRADIENT)>
              <div class=format!("w-full flex flex-col items-center justify-center space-y-[10rem]")>
@@ -56,32 +62,31 @@ fn HomePage() -> impl IntoView {
                      <p class="text-white italic text-3xl md:text-6xl font-opensans font-extrabold">
                          {"A blazingly fast way to start a "}
                          <Button
-                             href="https://leptos-rs.github.io/leptos/".to_string()
-                             title="Leptos".to_string()
-                             css=Some("#ff7733".to_string())
+                             href=s!("https://leptos-rs.github.io/leptos/")
+                             title=s!("Leptos")
+                             css=Some(s!("#ff7733"))
                          /> {" "}
                          <Button
-                             href="https://leptos-rs.github.io/leptos/01_introduction.html"
-                                 .to_string()
-                             title="client-side rendered".to_string()
-                             css=Some("#33bbff".to_string())
+                             href=s!("https://leptos.dev/")
+                             title=s!("client-side rendered")
+                             css=Some(s!("#33bbff"))
                          /> {" app with "}
                          <Button
-                             href="https://github.com/leptos-rs/leptos/discussions/125".to_string()
-                             title="tailwind.".to_string()
-                             css=Some("#dd33ff".to_string())
+                             href=s!("https://github.com/leptos-rs/leptos/discussions/125")
+                             title=s!("tailwind.")
+                             css=Some(s!("#dd33ff"))
                          />
                      </p>
                  </div>
                  <div class="w-2/3 text-center text-xl md:text-2xl space-x-[5rem]">
                      <Button
-                         href="https://github.com/friendlymatthew/leptos-csr-tailwind".to_string()
-                         title="See boilerplate".to_string()
+                         href=s!("https://github.com/friendlymatthew/leptos-csr-tailwind")
+                         title=s!("See boilerplate")
                          css=None
                      />
                      <Button
-                         href="https://github.com/friendlymatthew/create-leptos-csr-tw".to_string()
-                         title="Usage".to_string()
+                         href=s!("https://github.com/friendlymatthew/create-leptos-csr-tw")
+                         title=s!("Usage")
                          css=None
                      />
                  </div>
@@ -100,7 +105,7 @@ fn ErrorPage() -> impl IntoView {
     let unknown = p_unknown();
 
     view! {
-        <main class=format!("{} {}", BACKGROUND_CSS, FLOWER_GRADIENT)>
+        <main class=format!("{} {} h-screen", BACKGROUND_CSS, FLOWER_GRADIENT)>
             <p class="">Unknown command: {unknown}</p>
         </main>
     }
