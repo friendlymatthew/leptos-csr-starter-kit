@@ -2,12 +2,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>create-leptos-csr-tailwind</title>
-    <script type="module">import init from '/leptos-csr-tailwind-90724f95e1a9ed51.js';init('/leptos-csr-tailwind-90724f95e1a9ed51_bg.wasm');</script>
+    <script type="module">import init from '/leptos-csr-tailwind-ed46346931adc922.js';init('/leptos-csr-tailwind-ed46346931adc922_bg.wasm');</script>
     <link rel="icon" href="/favicon-7529185d91038ff0.ico">
 
     
     
-
     <link rel="stylesheet" href="/output-b7ee9ffd3f015401.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,35 +14,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&amp;display=swap" rel="stylesheet">
 
 
-<link rel="preload" href="/leptos-csr-tailwind-90724f95e1a9ed51_bg.wasm" as="fetch" type="application/wasm" crossorigin="">
-<link rel="modulepreload" href="/leptos-csr-tailwind-90724f95e1a9ed51.js"></head>
+<link rel="preload" href="/leptos-csr-tailwind-ed46346931adc922_bg.wasm" as="fetch" type="application/wasm" crossorigin="">
+<link rel="modulepreload" href="/leptos-csr-tailwind-ed46346931adc922.js"></head>
 <body>
 
-<script>(function () {
-    var protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-    var url = protocol + '//' + window.location.host + '/_trunk/ws';
-    var poll_interval = 5000;
-    var reload_upon_connect = () => {
-        window.setTimeout(
-            () => {
-                // when we successfully reconnect, we'll force a
-                // reload (since we presumably lost connection to
-                // trunk due to it being killed, so it will have
-                // rebuilt on restart)
-                var ws = new WebSocket(url);
-                ws.onopen = () => window.location.reload();
-                ws.onclose = reload_upon_connect;
-            },
-            poll_interval);
-    };
-
-    var ws = new WebSocket(url);
-    ws.onmessage = (ev) => {
-        const msg = JSON.parse(ev.data);
-        if (msg.reload) {
-            window.location.reload();
-        }
-    };
-    ws.onclose = reload_upon_connect;
-})()
-</script></body></html>
+</body></html>

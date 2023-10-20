@@ -40,12 +40,7 @@ fn Button(
     };
 
     view! {
-        <a
-            class=format!("inline-block {}", bg_css)
-            target="_blank"
-            href=href
-            rel="noreferrer"
-        >
+        <a class=format!("inline-block {}", bg_css) target="_blank" href=href rel="noreferrer">
             <p class=format!("{}", underline_css)>{title}</p>
         </a>
     }
@@ -64,13 +59,13 @@ fn HomePage() -> impl IntoView {
                              href="https://leptos-rs.github.io/leptos/".to_string()
                              title="Leptos".to_string()
                              css=Some("#ff7733".to_string())
-                         />
-                        {" "}
+                         /> {" "}
                          <Button
-                             href="https://leptos-rs.github.io/leptos/01_introduction.html".to_string()
+                             href="https://leptos-rs.github.io/leptos/01_introduction.html"
+                                 .to_string()
                              title="client-side rendered".to_string()
                              css=Some("#33bbff".to_string())
-                         />{" app with "}
+                         /> {" app with "}
                          <Button
                              href="https://github.com/leptos-rs/leptos/discussions/125".to_string()
                              title="tailwind.".to_string()
@@ -78,18 +73,18 @@ fn HomePage() -> impl IntoView {
                          />
                      </p>
                  </div>
-                <div class="w-2/3 text-center text-xl md:text-2xl space-x-[5rem]">
-                    <Button
-                        href="https://github.com/friendlymatthew/leptos-csr-tailwind".to_string()
-                        title="See boilerplate".to_string()
-                        css=None
-                    />
-                    <Button
-                        href="https://github.com/friendlymatthew/create-leptos-csr-tw".to_string()
-                        title="Usage".to_string()
-                        css=None
-                    />
-                </div>
+                 <div class="w-2/3 text-center text-xl md:text-2xl space-x-[5rem]">
+                     <Button
+                         href="https://github.com/friendlymatthew/leptos-csr-tailwind".to_string()
+                         title="See boilerplate".to_string()
+                         css=None
+                     />
+                     <Button
+                         href="https://github.com/friendlymatthew/create-leptos-csr-tw".to_string()
+                         title="Usage".to_string()
+                         css=None
+                     />
+                 </div>
              </div>
          </main>
      }
