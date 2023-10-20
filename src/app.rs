@@ -25,10 +25,17 @@ pub fn App() -> impl IntoView {
 fn HomePage() -> impl IntoView {
     view! {
         <main class=format!("{}", BACKGROUND_CSS)>
+            <a
+                class="cursor-pointer underline decoration-[0.3em] decoration-purple-800 hover:decoration-dotted"
+                href="https://github.com/friendlymatthew/leptos-csr-tailwind"
+                rel="noreferrer"
+                target="_blank"
+            >
             <p class=format!(
                 "{} text-slate-800",
                 TEXT_CSS,
             )>A leptos clientside boilerplate with tailwind</p>
+            </a>
             <p class=format!("{} italic text-slate-800", TEXT_CSS)>BOTTOM TEXT</p>
         </main>
     }
