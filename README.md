@@ -3,14 +3,24 @@ Unlock rapid development with Leptos, paired seamlessly with TailwindCSS. This t
 
 
 ## Quick Start 🚀
-Inspired by `create-react-app`, globally install the [`create-leptos-csr-tw`](https://crates.io/crates/create-leptos-csr-tw) crate.
+### Inspired by `create-react-app`, globally install the [`crate`](https://crates.io/crates/create-leptos-csr-tw):
 ```bash
 cargo add create-leptos-csr-tw
 ```
 
-Once installed, you can generate a new Leptos project with TailwindCSS by simply running:
+### Once installed, you can generate a new Leptos project with TailwindCSS by simply running:
 ```bash
 create-leptos-csr-tw
+```
+Please follow the prompts to configure your project. It will ask if you want to use Vercel for deployment, and if you choose so, it will generate a `vercel.json` for client-side routing.
+
+### To run the app, simply run both:
+```bash
+npx tailwindcss -i ./input.css -o ./style/output.css --watch
+```
+and
+```bash
+trunk serve --open
 ```
 
 For more information, check out the [crate's README](https://github.com/friendlymatthew/create-leptos-csr-tw#README)
