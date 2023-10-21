@@ -767,24 +767,24 @@ imports.wbg.__wbindgen_debug_string = function(arg0, arg1) {
 imports.wbg.__wbindgen_throw = function(arg0, arg1) {
     throw new Error(getStringFromWasm0(arg0, arg1));
 };
-imports.wbg.__wbindgen_closure_wrapper475 = function(arg0, arg1, arg2) {
-    const ret = makeMutClosure(arg0, arg1, 157, __wbg_adapter_30);
+imports.wbg.__wbindgen_closure_wrapper478 = function(arg0, arg1, arg2) {
+    const ret = makeMutClosure(arg0, arg1, 158, __wbg_adapter_30);
     return addHeapObject(ret);
 };
-imports.wbg.__wbindgen_closure_wrapper692 = function(arg0, arg1, arg2) {
-    const ret = makeMutClosure(arg0, arg1, 237, __wbg_adapter_33);
+imports.wbg.__wbindgen_closure_wrapper695 = function(arg0, arg1, arg2) {
+    const ret = makeMutClosure(arg0, arg1, 238, __wbg_adapter_33);
     return addHeapObject(ret);
 };
-imports.wbg.__wbindgen_closure_wrapper694 = function(arg0, arg1, arg2) {
-    const ret = makeClosure(arg0, arg1, 237, __wbg_adapter_36);
+imports.wbg.__wbindgen_closure_wrapper697 = function(arg0, arg1, arg2) {
+    const ret = makeClosure(arg0, arg1, 238, __wbg_adapter_36);
     return addHeapObject(ret);
 };
-imports.wbg.__wbindgen_closure_wrapper820 = function(arg0, arg1, arg2) {
-    const ret = makeMutClosure(arg0, arg1, 266, __wbg_adapter_39);
+imports.wbg.__wbindgen_closure_wrapper823 = function(arg0, arg1, arg2) {
+    const ret = makeMutClosure(arg0, arg1, 267, __wbg_adapter_39);
     return addHeapObject(ret);
 };
-imports.wbg.__wbindgen_closure_wrapper2228 = function(arg0, arg1, arg2) {
-    const ret = makeMutClosure(arg0, arg1, 292, __wbg_adapter_42);
+imports.wbg.__wbindgen_closure_wrapper2231 = function(arg0, arg1, arg2) {
+    const ret = makeMutClosure(arg0, arg1, 293, __wbg_adapter_42);
     return addHeapObject(ret);
 };
 
@@ -826,7 +826,7 @@ async function __wbg_init(input) {
     if (wasm !== undefined) return wasm;
 
     if (typeof input === 'undefined') {
-        input = new URL('leptos-csr-tailwind-ada689abab7e12f4_bg.wasm', import.meta.url);
+        input = new URL('leptos-csr-tailwind-89a96774d1974a9_bg.wasm', import.meta.url);
     }
     const imports = __wbg_get_imports();
 
