@@ -46,7 +46,7 @@ fn modify_file<F: FnOnce(String) -> String>(file_path: &str, modifier: F) {
 
 fn setup_project(project_name: &str, use_vercel: bool) {
 
-    let template_path = PathBuf::from("./src/templates/tailwind");
+    let template_path = PathBuf::from("./templates/tailwind");
     let destination_path = PathBuf::from(project_name);
 
     if let Err(e) = copy_dir::copy_dir(&template_path, &destination_path) {
@@ -60,7 +60,13 @@ fn setup_project(project_name: &str, use_vercel: bool) {
         content.replace("name = \"tailwind\"", &format!("name = \"{}\"", project_name))
     });
 
-    // 2. modify app.rs
+    // 2. modify index.html
+    let index_html_path = format!("{}/index.html", project_name);
+    modify_file(&index_html_path, |content| {
+        content.replace("<title>tailwind</title>", &format!("<title>{}</title>", project_name))
+    });
+
+    // 3. modify app.rs
     let app_rs_path = format!("{}/src/app.rs", project_name);
     modify_file(&app_rs_path, |content| {
         content.replace("<Stylesheet id=\"leptos\" href=\"/pkg/tailwind.css\"/>",

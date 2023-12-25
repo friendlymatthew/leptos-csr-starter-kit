@@ -11,7 +11,7 @@ pub fn App() -> impl IntoView {
     provide_meta_context();
 
     view! {
-        <Stylesheet id="leptos" href="/pkg/standard.css"/>
+        <Stylesheet id="leptos" href="/pkg/tailwind.css"/>
 
         <Router>
             <Routes>
