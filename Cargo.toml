@@ -1,16 +1,7 @@
-[package]
-name = "leptos-csr-tailwind"
-version = "0.1.0"
-edition = "2021"
+[workspace]
+members = [
+    "cli",
+    "templates/tailwind",
+]
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
-[dependencies]
-console_error_panic_hook = "0.1.7"
-console_log = "1.0.0"
-
-leptos = { version = "0.5.1", features = ["csr", "nightly"] }
-leptos-use = "0.7.1"
-leptos_meta = "0.5.1"
-leptos_router = { version = "0.5.1", features = ["csr"] }
-log = "0.4.20"
+resolver = "2"

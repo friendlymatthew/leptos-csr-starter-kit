@@ -1,48 +1,56 @@
-# Leptos CSR with TailwindCSS Starter Template
-Unlock rapid development with Leptos, paired seamlessly with TailwindCSS. This template is crafted to save you the hassle of piecing everything together. Developers can focus on what truly matters: building outstanding web applications.
+# *create-leptos-csr*
+Generate a client-side rendered leptos application with one command.
 
-
-## Quick Start 🚀
-### Inspired by `create-react-app`, globally install the [`crate`](https://crates.io/crates/create-leptos-csr-tw):
+### Getting Started
+Install `create-leptos-csr` globally using:
 ```bash
 cargo add create-leptos-csr-tw
 ```
 
-### Once installed, you can generate a new Leptos project with TailwindCSS by simply running:
+This command installs the necessary binary, making it accessible from your command line. 
+
+To initiate a new Leptos project, run:
 ```bash
 create-leptos-csr-tw
 ```
-Please follow the prompts to configure your project. It will ask if you want to use Vercel for deployment, and if you choose so, it will generate a `vercel.json` for client-side routing.
 
-### To run the app, simply run both:
+### Template features:
+
+- [x] TailwindCSS for styling
+- [x] Serves image content from `/public` that trunk recognizes
+- [x] Mobile viewport configuration 
+- [x] An **optional** `vercel` config file to for deployment routing.
+- [x] [`Leptos-use`](https://github.com/Synphonyte/leptos-use), a collection of Leptos utilities
+- [x] Up to date crate dependencies
+
+### Why I made this
+Creating a client-side rendered Leptos application usually requires starting from scratch, involving multiple steps and potential hurdles.
+
+Something like:
 ```bash
-npx tailwindcss -i ./input.css -o ./style/output.css --watch
-```
-and
-```bash
+cargo init <project>
+cargo add leptos --features=csr,nightly
+cd <project>
+touch index.html
+... # more work here
+touch input.css
+npx tailwindcss init
+... # setting up your tailwind...
+mkdir public
+(modify `index.html`)
+... # adding the same boilerplate to your index.html
 trunk serve --open
 ```
 
-For more information, check out the [crate's README](https://github.com/friendlymatthew/create-leptos-csr-tw#README)
+This crate aims to reduce all the hair pulling that a beginner would face when setting up a leptos application. For experienced developers, this crate saves you time by setting up the necessary stuff. 
 
-## Features
-
-### 1. **TailwindCSS Ready**
-The project is set up with TailwindCSS based on the recommended configurations from [GreatGreg's guide](https://github.com/leptos-rs/leptos/discussions/125).
-
-### 2. **Vercel Deployment**
-To deploy seamlessly on Vercel, the provided `vercel.json` file is set up to handle routing correctly. With this configuration, any unmatched route will serve the `index.html` file, letting the client-side logic handle the routing. This is ideal for single-page applications.
-
-### 3. **Public Assets Management**
-Your static assets like images are in good hands. Place them in the `/public` folder and they'll be automatically copied to the `/dist` during compilation. No missed assets after building!
-
-### 4. **Leptos-Use**
-Benefit from pre-included [Leptos-Use](https://github.com/Synphonyte/leptos-use/tree/main), your go-to collection of essential Leptos utilities. 
+If you're just starting out, this is great starting point since you can use this template while reading [the Leptos book](https://book.leptos.dev/).
 
 
-## Conclusion
-Whether you're looking to quickly prototype or build a production-ready application, this starter template offers a solid foundation for your Leptos-based projects. Adjust and extend as per your requirements!
+### Recent Updates
+- [x] Update wasm-bindgen to 0.2.89
+- [x] Removed a lot of boilerplate in `app.rs`
+- [x] Restructured project to extend to more templates
 
-
-## Acknowledgements
-A hearty shoutout to [AlphaKeks](https://github.com/AlphaKeks) and [Stefan Todorov](https://github.com/coravacav) for their invaluable suggestions.
+### Contributions
+Contributions are warmly welcomed and greatly appreciated. I'd love to see other templates that use different styling libraries or deployment services.
