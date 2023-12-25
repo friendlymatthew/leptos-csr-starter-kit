@@ -1,13 +1,13 @@
 [package]
 name = "create-leptos-csr"
-version = "0.2.0"
+version = "0.2.1"
 edition = "2021"
 description = "A CLI for setting up a client-side Leptos web application."
 readme = "README.md"
 license = "MIT"
 authors = ["Matthew Kim <matthewkmkim@gmail.com>"]
 repository = "https://github.com/friendlymatthew/create-leptos-csr"
-
+include = ["src/**/*", "templates/**/*"]
 
 [dependencies]
 colored = "2.0.4"
