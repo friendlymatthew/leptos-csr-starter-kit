@@ -1,20 +1,18 @@
 [package]
-name = "create-leptos-csr"
-version = "0.2.1"
+name = "tailwind"
+version = "0.1.0"
 edition = "2021"
-description = "A CLI for setting up a client-side Leptos web application."
-readme = "README.md"
-license = "MIT"
-authors = ["Matthew Kim <matthewkmkim@gmail.com>"]
-repository = "https://github.com/friendlymatthew/create-leptos-csr"
-include = ["src/**/*", "templates/**/*"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-colored = "2.0.4"
+leptos = { version = "0.5.4", features = ["csr", "nightly"] }
+console_error_panic_hook = "0.1.7"
+console_log = "1.0.0"
 copy_dir = "0.1.3"
-dialoguer = "0.11.0"
-fs_extra = "1.3.0"
-regex = "1.10.2"
-reqwest = "0.11.22"
-tempfile = { version = "3.8.0", features = [] }
-url = "2.4.1"
+
+leptos-use = "0.9.0"
+leptos_meta = "0.5.1"
+leptos_router = { version = "0.5.1", features = ["csr"] }
+log = "0.4.20"
+
