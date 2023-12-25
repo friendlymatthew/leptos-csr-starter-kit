@@ -46,7 +46,7 @@ fn modify_file<F: FnOnce(String) -> String>(file_path: &str, modifier: F) {
 
 fn setup_project(project_name: &str, use_vercel: bool) {
 
-    let template_path = PathBuf::from("../templates/tailwind");
+    let template_path = PathBuf::from("./src/templates/tailwind");
     let destination_path = PathBuf::from(project_name);
 
     if let Err(e) = copy_dir::copy_dir(&template_path, &destination_path) {
