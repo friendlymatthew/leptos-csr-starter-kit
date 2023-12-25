@@ -7,7 +7,7 @@ Generate a client-side rendered leptos application with one command.
 ### Getting Started
 Install `create-leptos-csr` globally using:
 ```bash
-cargo add create-leptos-csr-tw
+cargo install create-leptos-csr-tw
 ```
 
 This command installs the necessary binary, making it accessible from your command line. 
