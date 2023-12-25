@@ -1,5 +1,8 @@
-# *create-leptos-csr*
+## *create-leptos-csr*
 Generate a client-side rendered leptos application with one command.
+
+![mesa](https://github.com/friendlymatthew/create-leptos-csr/assets/38759997/39c3c457-abd8-467b-a3b1-07aff61fd0ea)
+
 
 ### Getting Started
 Install `create-leptos-csr` globally using:
