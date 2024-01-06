@@ -4,7 +4,7 @@ use leptos_router::*;
 use leptos::html::Div;
 use leptos_use::core::Position;
 use leptos_use::{use_draggable_with_options, use_window, UseDraggableOptions, UseDraggableReturn};
-
+use leptos_theme::ThemeProvider;
 
 #[component]
 pub fn App() -> impl IntoView {
@@ -12,13 +12,14 @@ pub fn App() -> impl IntoView {
 
     view! {
         <Stylesheet id="leptos" href="/pkg/tailwind.css"/>
-
-        <Router>
-            <Routes>
-                <Route path="/" view=HomePage/>
-                <Route path="/:else" view=ErrorPage/>
-            </Routes>
-        </Router>
+        <ThemeProvider>
+            <Router>
+                <Routes>
+                    <Route path="/" view=HomePage/>
+                    <Route path="/:else" view=ErrorPage/>
+                </Routes>
+            </Router>
+        </ThemeProvider>
     }
 }
 
@@ -46,10 +47,12 @@ fn HomePage() -> impl IntoView {
         ("https://discord.gg/umUZ5Y8F7u", "Join the Official Discord"),
     ];
 
+    const REPO: &'static str = "https://github.com/friendlymatthew/leptos-csr-starter-kit";
+
     view! {
-        <main class="min-h-screen py-20 w-full space-y-8">
-            <div class="text-center font-robotomono space-y-2">
-                <p class="text-center font-robotomono text-3xl">Welcome to Leptos!</p>
+        <main class="dark:bg-[#1a1a1a] bg-white dark:text-white h-screen py-20 w-full space-y-8 font-robotomono">
+            <div class="text-center space-y-2">
+                <p class="text-3xl">leptos-csr-starter-kit</p>
                 <p>Set up a client side rendered Leptos app with one command</p>
             </div>
             <div class="flex space-x-20 justify-center">
@@ -58,7 +61,7 @@ fn HomePage() -> impl IntoView {
                     .enumerate()
                     .map(|(idx, (link, title))| {
                         view! {
-                            <a class: bg - color - 1 = move || idx == 0 class : bg - color - 2 =
+                            < a class : bg - color - 1 = move || idx == 0 class : bg - color - 2 =
                             move || idx != 0 href = { link } target = "_blank" rel = "noreferrer" >
                             < p > { title } </ p > </ a >
                         }
@@ -68,7 +71,7 @@ fn HomePage() -> impl IntoView {
 
             <div
                 node_ref=el
-                class="font-robotomono px-4 py-2 space-y-4 border border-gray-400/30 rounded shadow hover:shadow-lg fixed select-none cursor-move z-24"
+                class="px-4 py-2 space-y-4 border border-gray-400/30 rounded shadow hover:shadow-lg fixed select-none cursor-move z-24"
                 style=move || format!("touch-action: none; {}", style())
             >
                 <div>
@@ -76,7 +79,7 @@ fn HomePage() -> impl IntoView {
                         Contribute to the
                         <a
                             class="hover:no-underline underline"
-                            href="https://github.com/friendlymatthew/create-leptos-csr"
+                            href=REPO
                             target="_blank"
                             rel="noreferrer"
                         >
@@ -88,7 +91,7 @@ fn HomePage() -> impl IntoView {
                         Or, submit
                         <a
                             class="hover:no-underline underline"
-                            href="https://github.com/friendlymatthew/create-leptos-csr/issues"
+                            href=format!("{}/issues/new", REPO)
                             target="_blank"
                             rel="noreferrer"
                         >
@@ -113,7 +116,7 @@ fn ErrorPage() -> impl IntoView {
     let unknown = p_unknown();
 
     view! {
-        <main class=format!("h-screen w-full flex flex-col items-center justify-center")>
+        <main class=format!("h-screen w-full flex flex-col items-center justify-center font-robotomono")>
             <p class="">Unknown command: {unknown}</p>
         </main>
     }

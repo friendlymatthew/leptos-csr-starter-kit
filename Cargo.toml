@@ -15,4 +15,5 @@ leptos-use = "0.9.0"
 leptos_meta = "0.5.1"
 leptos_router = { version = "0.5.1", features = ["csr"] }
 log = "0.4.20"
+leptos_theme = "0.1.1"
 
